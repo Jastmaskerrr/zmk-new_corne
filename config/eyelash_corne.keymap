@@ -4,7 +4,6 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -81,7 +80,7 @@
             bindings = <
 &kp INS         &kp EQUAL   &kp N7  &kp N8  &kp N9  &kp BACKSPACE                                &mmv MOVE_UP                     &kp GRAVE             &kp AMPERSAND  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT
 &kp LEFT_SHIFT  &kp N0      &kp N4  &kp N5  &kp N6  &kp ENTER                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS             &kp POUND      &kp ASTERISK     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES
-&none           &kp PERIOD  &kp N1  &kp N2  &kp N3  &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &kp NON_US_BACKSLASH  &kp AT_SIGN    &kp CARET        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT
+&trans          &kp PERIOD  &kp N1  &kp N2  &kp N3  &none          &kp C_MUTE                    &mmv MOVE_DOWN                   &kp NON_US_BACKSLASH  &kp AT_SIGN    &kp CARET        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT
                                     &trans  &trans  &none                                                                         &none                 &trans         &trans
             >;
 
@@ -91,10 +90,10 @@
         raise_layer {
             display-name = "FN";
             bindings = <
-&trans  &kp EXCL      &kp AT        &kp HASH   &kp DLLR   &kp PRCNT                            &mmv MOVE_UP                     &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&trans  &bt BT_CLR    &mkp LCLK     &mkp MCLK  &mkp RCLK  &mkp MB4             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&trans  &out OUT_USB  &out OUT_BLE  &none      &none      &mkp MB5   &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                    &trans     &trans     &kp SPACE                                                             &kp RET    &trans     &trans
+&kp ESC    &kp F1        &kp F2        &kp F3   &kp F4            &kp F5                              &mmv MOVE_UP                     &kp F6     &kp F7     &kp F8    &kp F9    &kp F10   &kp BSPC
+&kp SPACE  &kp F11       &kp F12       &kp F13  &kp F14           &kp F15             &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F16    &kp F17    &kp F18   &kp F19   &kp F20   &kp GRAVE
+&trans     &out OUT_USB  &out OUT_BLE  &none    &none             &mkp MB5  &trans                    &mmv MOVE_DOWN                   &kp UNDER  &kp PLUS   &kp LBRC  &kp RBRC  &kp PIPE  &kp LEFT_GUI
+                                       &trans   &kp LEFT_CONTROL  &none                                                                &none      &kp SPACE  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
