@@ -62,7 +62,7 @@
     lr_clk: lr_clk {
         compatible = "zmk,behavior-hold-tap";
         label = "LEFT_TAP_RIGHT_HOLD";
-        #binding-cells = <0>;
+        #binding-cells = <2>;
         tapping-term-ms = <200>;
         bindings = <&mkp>, <&mkp>;
     };
