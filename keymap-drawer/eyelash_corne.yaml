@@ -105,7 +105,7 @@ layers:
   - F3
   - F4
   - F5
-  - $$mdi:pan-up$$
+  - '&msc MOVE_UP'
   - F6
   - F7
   - F8
@@ -118,9 +118,9 @@ layers:
   - F13
   - F14
   - F15
-  - $$mdi:pan-left$$
+  - '&msc MOVE_LEFT'
   - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:pan-right$$
+  - '&msc MOVE_RIGHT'
   - F16
   - F17
   - F18
@@ -134,7 +134,7 @@ layers:
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:pan-down$$
+  - '&msc MOVE_DOWN'
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
