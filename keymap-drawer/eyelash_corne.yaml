@@ -45,7 +45,7 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-space$$
-  - {t: 'Gui+$$mdi:keyboard-tab$$', h: SYMBOL}
+  - {t: 'Ctl+Alt+$$mdi:keyboard-tab$$', h: SYMBOL}
   - {t: 'Alt+$$mdi:keyboard-tab$$', h: FN}
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:apple-keyboard-control$$
