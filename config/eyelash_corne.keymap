@@ -51,14 +51,6 @@
         tap-ms = <100>;
     };
 
-    j_dance: j_dance {
-        compatible = "zmk,behavior-tap-dance";
-        label = "J_DANCE";
-        #binding-cells = <0>;
-        tapping-term-ms = <250>;
-        bindings = <&lt 3 J>, <&kp J>;
-    };
-
     lr_clk: lr_clk {
         compatible = "zmk,behavior-hold-tap";
         label = "LEFT_TAP_RIGHT_HOLD";
@@ -83,7 +75,7 @@
             display-name = "MAIN";
             bindings = <
 &kp ESCAPE      &kp Q  &kp W  &kp E         &kp R      &kp T                                        &mmv MOVE_UP                        &kp Y          &kp U          &kp I             &kp O    &kp P     &kp DELETE
-&kp CAPS        &kp A  &kp S  &kp D         &kp F      &kp G                        &mmv MOVE_LEFT  &lr_clk LCLK RCLK  &mmv MOVE_RIGHT  &kp H          &j_dance       &kp K             &kp L    &kp SEMI  &kp ENTER
+&kp CAPS        &kp A  &kp S  &kp D         &kp F      &kp G                        &mmv MOVE_LEFT  &lr_clk RCLK LCLK  &mmv MOVE_RIGHT  &kp H          &lt 3 J        &kp K             &kp L    &kp SEMI  &kp ENTER
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V      &kp B          &kp C_MUTE                    &mmv MOVE_DOWN                      &kp N          &kp M          &kp COMMA         &kp DOT  &kp FSLH  &kp LEFT_GUI
                               &kp LEFT_ALT  &kp SPACE  &lt 1 LG(TAB)                                                                    &lt 2 LA(TAB)  &kp BACKSPACE  &kp LEFT_CONTROL
             >;
@@ -119,7 +111,7 @@
             display-name = "NAV";
             bindings = <
 &none  &kp PAGE_UP  &kp LS(TAB)  &kp UP    &kp TAB    &kp PAGE_DOWN                             &mmv MOVE_UP                     &none        &none          &kp MINUS        &kp EQUAL    &kp PAGE_UP    &kp HOME
-&none  &kp HOME     &kp LEFT     &kp DOWN  &kp RIGHT  &kp END                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none        &none          &kp LEFT_SHIFT   &none        &none          &none
+&none  &kp HOME     &kp LEFT     &kp DOWN  &kp RIGHT  &kp END                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none        &kp J          &kp LEFT_SHIFT   &none        &none          &none
 &none  &kp N1       &kp N2       &kp N3    &kp N4     &kp N5         &kp ESC                    &mmv MOVE_DOWN                   &none        &none          &kp LS(LC(TAB))  &kp LC(TAB)  &kp PAGE_DOWN  &kp END
                                  &trans    &kp SPACE  &kp LG(TAB)                                                                &kp LA(TAB)  &kp BACKSPACE  &trans
             >;
