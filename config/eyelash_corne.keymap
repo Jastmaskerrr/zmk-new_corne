@@ -51,20 +51,20 @@
         tap-ms = <100>;
     };
 
-    bspc_layer: bspc_layer {
+    j_layer: j_layer {
         compatible = "zmk,behavior-tap-hold";
-        label = "BSPC_TAP_LAYER_HOLD";
+        label = "J_TAP_LAYER_HOLD";
         #binding-cells = <0>;
         tapping-term-ms = <200>; 
-        bindings = <&kp BSPC>, <&mo 3>; 
+        bindings = <&kp J>, <&mo 3>; 
     };
 
-    bspc_dance: bspc_dance {
+    j_dance: j_dance {
         compatible = "zmk,behavior-tap-dance";
-        label = "BSPC_DANCE";
+        label = "J_DANCE";
         #binding-cells = <0>;
         tapping-term-ms = <250>; 
-        bindings = <&bspc_layer>, <&kp BSPC>;
+        bindings = <&j_layer>, <&kp J>;
     };
 
     combos {
