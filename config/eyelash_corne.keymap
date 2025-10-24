@@ -51,21 +51,22 @@
         tap-ms = <100>;
     };
 
-    j_layer: j_layer {
-        compatible = "zmk,behavior-tap-hold";
-        label = "J_TAP_LAYER_HOLD";
-        #binding-cells = <0>;
-        tapping-term-ms = <200>;
-        bindings = <&kp J>, <&mo 3>;
-    };
 
-    j_dance: j_dance {
-        compatible = "zmk,behavior-tap-dance";
-        label = "J_DANCE";
-        #binding-cells = <0>;
-        tapping-term-ms = <250>;
-        bindings = <&j_layer>, <&kp J>;
-    };
+        j_layer: j_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "J_TAP_LAYER_HOLD";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mo 3>, <&kp J>;
+        };
+
+        j_dance: j_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "J_DANCE";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&j_layer>, <&kp J>;
+        };
 
     lr_clk: lr_clk {
         compatible = "zmk,behavior-hold-tap";
