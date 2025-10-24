@@ -57,7 +57,7 @@
             label = "J_TAP_LAYER_HOLD";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mo 3>, <&kp J>;
+            bindings = <&mo 3 &kp J>;
         };
 
         j_dance: j_dance {
