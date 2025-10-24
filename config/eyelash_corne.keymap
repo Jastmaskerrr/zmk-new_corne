@@ -55,15 +55,15 @@
         compatible = "zmk,behavior-tap-hold";
         label = "J_TAP_LAYER_HOLD";
         #binding-cells = <0>;
-        tapping-term-ms = <200>; 
-        bindings = <&kp J>, <&mo 3>; 
+        tapping-term-ms = <200>;
+        bindings = <&kp J>, <&mo 3>;
     };
 
     j_dance: j_dance {
         compatible = "zmk,behavior-tap-dance";
         label = "J_DANCE";
         #binding-cells = <0>;
-        tapping-term-ms = <250>; 
+        tapping-term-ms = <250>;
         bindings = <&j_layer>, <&kp J>;
     };
 
@@ -80,10 +80,10 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "QWERTY";
+            display-name = "MAIN";
             bindings = <
 &kp ESCAPE      &kp Q  &kp W  &kp E         &kp R      &kp T                                       &mmv MOVE_UP                     &kp Y          &kp U          &kp I             &kp O    &kp P     &kp DELETE
-&lt 4 CAPS      &kp A  &kp S  &kp D         &kp F      &kp G                       &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H          &lt 3 J        &kp K             &kp L    &kp SEMI  &kp ENTER
+&lt 4 CAPS      &kp A  &kp S  &kp D         &kp F      &kp G                       &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp H          &j_dance       &kp K             &kp L    &kp SEMI  &kp ENTER
 &kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V      &kp B          &mkp RCLK                    &mmv MOVE_DOWN                   &kp N          &kp M          &kp COMMA         &kp DOT  &kp FSLH  &kp LEFT_GUI
                               &kp LEFT_ALT  &kp SPACE  &lt 1 LG(TAB)                                                                &lt 2 LA(TAB)  &kp BACKSPACE  &kp LEFT_CONTROL
             >;
@@ -97,7 +97,7 @@
 &kp INS         &kp EQUAL   &kp N7  &kp N8  &kp N9  &kp BACKSPACE                          &kp UP                &kp GRAVE             &kp AMPERSAND  &kp EXCLAMATION  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT
 &kp LEFT_SHIFT  &kp N0      &kp N4  &kp N5  &kp N6  &kp ENTER                    &kp LEFT  &kp ENTER  &kp RIGHT  &kp MINUS             &kp POUND      &kp ASTERISK     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES
 &trans          &kp PERIOD  &kp N1  &kp N2  &kp N3  &none          &kp C_MUTE              &kp DOWN              &kp NON_US_BACKSLASH  &kp AT_SIGN    &kp CARET        &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PERCENT
-                                    &trans  &trans  &none                                                        &none                 &trans         &trans
+                                    &trans  &trans  &none                                                        &mo 2                 &trans         &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -109,14 +109,14 @@
 &kp ESC  &kp F1   &kp F2   &kp F3   &kp F4            &kp F5                             &msc SCRL_UP                     &kp F6   &kp F7     &kp F8   &kp F9   &kp F10  &kp BSPC
 &kp TAB  &kp F11  &kp F12  &kp F13  &kp F14           &kp F15            &msc SCRL_LEFT  &mkp MCLK       &msc SCRL_RIGHT  &kp F16  &kp F17    &kp F18  &kp F19  &kp F20  &none
 &trans   &kp N1   &kp N2   &kp N3   &kp N4            &kp N5   &trans                    &msc SCRL_DOWN                   &kp N6   &kp N7     &kp N8   &kp N9   &kp N0   &kp LEFT_GUI
-                           &trans   &kp LEFT_CONTROL  &none                                                               &none    &kp SPACE  &trans
+                           &trans   &kp LEFT_CONTROL  &mo 1                                                               &none    &kp SPACE  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
 
         layer_3 {
-            display-name = "VIM";
+            display-name = "NAV";
             bindings = <
 &none  &kp PAGE_UP  &kp LS(TAB)  &kp UP    &kp TAB    &kp PAGE_DOWN                                &mmv MOVE_UP                     &none        &none          &kp MINUS        &kp EQUAL    &kp PAGE_UP    &kp HOME
 &none  &kp HOME     &kp LEFT     &kp DOWN  &kp RIGHT  &kp END                      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none        &none          &kp LEFT_SHIFT   &none        &none          &none
@@ -128,13 +128,22 @@
         };
 
         layer_4 {
-            display-name = "ZMK";
+            display-name = "UTIL";
             bindings = <
-&none   &none   &none   &none       &none       &none                     &none           &none   &none   &none   &none   &none   &none 
-&none   &none   &none   &bt BT_PRV  &bt BT_NXT  &none             &none   &none   &none   &none   &none   &none   &none   &none   &none 
-&none   &none   &none   &none       &none       &none   &none             &none           &none   &none   &none   &none   &none   &none 
-                        &none       &none       &none                                     &none   &none   &none 
+&none  &none  &none  &none       &none       &none                  &none         &none  &none  &none  &none  &none  &none
+&none  &none  &none  &bt BT_PRV  &bt BT_NXT  &none           &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none       &none       &none  &none           &none         &none  &none  &none  &none  &none  &none
+                     &none       &none       &none                                &none  &none  &none
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        UTIL {
+            if-layers = <1 2>;
+            then-layer = <4>;
         };
     };
 };
