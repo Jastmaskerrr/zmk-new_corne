@@ -67,6 +67,14 @@
         bindings = <&j_layer>, <&kp J>;
     };
 
+    lr_clk: lr_clk {
+        compatible = "zmk,behavior-hold-tap";
+        label = "LEFT_TAP_RIGHT_HOLD";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>; 
+        bindings = <&mkp RCLK>, <&mkp LCLK>;
+    };
+
     combos {
         compatible = "zmk,combos";
 
