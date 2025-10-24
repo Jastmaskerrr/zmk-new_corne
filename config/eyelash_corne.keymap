@@ -102,9 +102,9 @@
         raise_layer {
             display-name = "FN";
             bindings = <
-&kp ESC  &kp F1   &kp F2   &kp F3   &kp F4            &kp F5                            &msc SCRL_UP                     &kp F6   &kp F7     &kp F8   &kp F9   &kp F10  &kp BSPC
-&kp TAB  &kp F11  &kp F12  &kp F13  &kp F14           &kp F15           &msc SCRL_LEFT  &mkp MCLK       &msc SCRL_RIGHT  &kp F16  &kp F17    &kp F18  &kp F19  &kp F20  &none
-&trans   &kp N1   &kp N2   &kp N3   &kp N4            &kp N5   &none                    &msc SCRL_DOWN                   &kp N6   &kp N7     &kp N8   &kp N9   &kp N0   &kp LEFT_GUI
+&kp ESC  &kp F1   &kp F2   &kp F3   &kp F4            &kp F5                            &msc MOVE_UP                     &kp F6   &kp F7     &kp F8   &kp F9   &kp F10  &kp BSPC
+&kp TAB  &kp F11  &kp F12  &kp F13  &kp F14           &kp F15           &msc MOVE_LEFT  &mkp MCLK       &msc MOVE_RIGHT  &kp F16  &kp F17    &kp F18  &kp F19  &kp F20  &none
+&trans   &kp N1   &kp N2   &kp N3   &kp N4            &kp N5   &none                    &msc MOVE_DOWN                   &kp N6   &kp N7     &kp N8   &kp N9   &kp N0   &kp LEFT_GUI
                            &trans   &kp LEFT_CONTROL  &mo 1                                                              &none    &kp SPACE  &trans
             >;
 
