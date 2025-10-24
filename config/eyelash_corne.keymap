@@ -51,6 +51,22 @@
         tap-ms = <100>;
     };
 
+    bspc_layer: bspc_layer {
+        compatible = "zmk,behavior-tap-hold";
+        label = "BSPC_TAP_LAYER_HOLD";
+        #binding-cells = <0>;
+        tapping-term-ms = <200>; 
+        bindings = <&kp BSPC>, <&mo 3>; 
+    };
+
+    bspc_dance: bspc_dance {
+        compatible = "zmk,behavior-tap-dance";
+        label = "BSPC_DANCE";
+        #binding-cells = <0>;
+        tapping-term-ms = <250>; 
+        bindings = <&bspc_layer>, <&kp BSPC>;
+    };
+
     combos {
         compatible = "zmk,combos";
 
