@@ -38,13 +38,10 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
 
-        clk_encoder: clk_encoder {
+    clk_encoder: clk_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&mkp LCLK>, <&mkp RCLK>;
-
-            tap-ms = <250>;
-        };
+            bindings = <&mkp RCLK>, <&mkp LCLK>;
     };
 
     rgb_encoder: rgb_encoder {
@@ -57,8 +54,6 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-        tap-ms = <100>;
     };
 
     lr_clk: lr_clk {
