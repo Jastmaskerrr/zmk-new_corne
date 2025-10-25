@@ -35,7 +35,7 @@ layers:
   - C
   - V
   - B
-  - $$mdi:volume-off$$
+  - {t: ADJUST, h: toggle}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - N
   - M
