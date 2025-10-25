@@ -154,7 +154,7 @@ layers:
   - F3
   - F4
   - F5
-  - '&msc MOVE_Y(15)'
+  - '&msc MOVE_Y(20)'
   - F6
   - F7
   - F8
@@ -167,9 +167,9 @@ layers:
   - F13
   - F14
   - F15
-  - '&msc MOVE_X(-15)'
+  - '&msc MOVE_X(-20)'
   - $$mdi:mouse-scroll-wheel$$
-  - '&msc MOVE_X(15)'
+  - '&msc MOVE_X(20)'
   - F16
   - F17
   - F18
@@ -183,7 +183,7 @@ layers:
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&msc MOVE_Y(-15)'
+  - '&msc MOVE_Y(-20)'
   - {t: '6', s: ^}
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
