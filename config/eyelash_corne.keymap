@@ -101,7 +101,6 @@
                         &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
         };
-    };
 
 
         raise_layer {
@@ -154,6 +153,7 @@
 
             sensor-bindings = <&rgb_encoder>;
         };
+    };
 
 
     conditional_layers {
