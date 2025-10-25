@@ -42,6 +42,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&mkp RCLK>, <&mkp LCLK>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
