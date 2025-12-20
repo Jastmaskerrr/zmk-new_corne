@@ -103,10 +103,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&kp INS         &kp SPACE   &kp N7  &kp N8  &kp N9  &kp BACKSPACE                               &kp UP                &kp GRAVE  &kp AMPERSAND  &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SQT
-&kp LEFT_SHIFT  &kp N0      &kp N4  &kp N5  &kp N6  &kp ENTER                         &kp LEFT  &kp ENTER  &kp RIGHT  &kp MINUS  &kp POUND      &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE
-&trans          &kp PERIOD  &kp N1  &kp N2  &kp N3  &none          &kp LOCKING_NUM              &kp DOWN              &kp EQUAL  &kp AT_SIGN    &kp CARET        &kp DOLLAR            &kp NON_US_BACKSLASH   &kp PERCENT
-                                    &trans  &trans  &trans                                                            &trans     &trans         &trans
+&kp INS         &kp SPACE   &kp N7  &kp N8         &kp N9  &kp BACKSPACE                               &kp UP                &kp GRAVE  &kp AMPERSAND  &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SQT
+&kp LEFT_SHIFT  &kp N0      &kp N4  &kp N5         &kp N6  &kp ENTER                         &kp LEFT  &kp ENTER  &kp RIGHT  &kp MINUS  &kp POUND      &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE
+&trans          &kp PERIOD  &kp N1  &kp N2         &kp N3  &none          &kp LOCKING_NUM              &kp DOWN              &kp EQUAL  &kp AT_SIGN    &kp CARET        &kp DOLLAR            &kp NON_US_BACKSLASH   &kp PERCENT
+                                    &kp RIGHT_ALT  &trans  &trans                                                            &trans     &trans         &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
